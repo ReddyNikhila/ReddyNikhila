@@ -135,6 +135,14 @@ Gamified platform with coding challenges, quizzes, and a built-in compiler.
 
 ---
 
+### 🐍 Contribution snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ReddyNikhila/ReddyNikhila/output/github-contribution-grid-snake.svg" alt="Contribution snake animation" width="100%"/>
+</p>
+
+---
+
 <div align="center">
 
 ### 🤝 Let's Connect
