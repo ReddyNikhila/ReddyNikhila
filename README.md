@@ -120,7 +120,9 @@ Gamified platform with coding challenges, quizzes, and a built-in compiler.
 
 ---
 
-### 📜 Certifications
+<details>
+<summary><b>📜 Certifications (click to expand)</b></summary>
+<br>
 
 - ☕ Oracle Certified Java Programmer — *Oracle Corporation*
 - 🌐 IT Specialist HTML and CSS — *Pearson*
@@ -129,23 +131,28 @@ Gamified platform with coding challenges, quizzes, and a built-in compiler.
 - 🍃 MongoDB Certified Associate Developer — *MongoDB*
 - 🔗 Networking Essentials — *Cisco Networking Academy*
 
+</details>
+
 ---
 
-### 📊 GitHub Stats
+### 🐍 Contribution snake
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ReddyNikhila&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ReddyNikhila&theme=tokyonight&hide_border=true" width="48%"/>
+  <img src="https://raw.githubusercontent.com/ReddyNikhila/ReddyNikhila/output/github-contribution-grid-snake.svg" alt="Contribution snake animation" width="100%"/>
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ReddyNikhila&layout=compact&theme=tokyonight&hide_border=true" width="48%"/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ReddyNikhila&theme=tokyo-night&hide_border=true" width="48%"/>
-</p>
+<details>
+<summary><b>How to activate this (2-minute setup, click to expand)</b></summary>
+<br>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ReddyNikhila&theme=tokyonight&no-frame=true&row=1&column=6" />
-</p>
+This animation snake-eats your contribution graph — but it needs a GitHub Action running in your profile repo (`ReddyNikhila/ReddyNikhila`) to generate the SVG. Until that Action runs once, the image above will show broken.
+
+1. In your profile repo, go to **Actions → New workflow → set up a workflow yourself**.
+2. Name the file `snake.yml` and paste in the workflow from the [Platane/snk](https://github.com/Platane/snk) project (search "snk github action" for the exact YAML).
+3. Run the workflow once (or wait for its daily schedule).
+4. It pushes `github-contribution-grid-snake.svg` to an `output` branch — matching the URL already used above, so no further README edits are needed once it's live.
+
+</details>
 
 ---
 
