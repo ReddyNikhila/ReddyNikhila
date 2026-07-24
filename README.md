@@ -21,7 +21,7 @@
 - 🎓 B.Tech in Computer Science @ **Aditya College of Engineering and Technology** (CGPA: 8.85) — 2023–2027
 - 💻 Strong foundation in **DSA, OOP, DBMS, and Full Stack Development**
 - 🤖 Passionate about **AI-powered platforms**, scalable applications, and clean, real-world problem solving
-- 🧩 Solved **250+ problems** on LeetCode & CodeChef
+- 🧩 Solved **200+ problems** on LeetCode & CodeChef
 - 🏅 **4-star SQL coder** on HackerRank
 - 🏆 Top 6 rank among 160 teams — *Project Space Competition* (900+ participants)
 - 📫 Reach me at **nikhilareddy9333@gmail.com**
@@ -145,12 +145,49 @@ Gamified platform with coding challenges, quizzes, and a built-in compiler.
 <summary><b>How to activate this (2-minute setup, click to expand)</b></summary>
 <br>
 
-This animation snake-eats your contribution graph — but it needs a GitHub Action running in your profile repo (`ReddyNikhila/ReddyNikhila`) to generate the SVG. Until that Action runs once, the image above will show broken.
+The snake needs a GitHub Action in this same repo (`ReddyNikhila/ReddyNikhila`) to generate the SVG — it won't appear until you add this **once**:
 
-1. In your profile repo, go to **Actions → New workflow → set up a workflow yourself**.
-2. Name the file `snake.yml` and paste in the workflow from the [Platane/snk](https://github.com/Platane/snk) project (search "snk github action" for the exact YAML).
-3. Run the workflow once (or wait for its daily schedule).
-4. It pushes `github-contribution-grid-snake.svg` to an `output` branch — matching the URL already used above, so no further README edits are needed once it's live.
+1. In this repo on GitHub, go to **Actions** → **New workflow** → **set up a workflow yourself**.
+2. Name the file `.github/workflows/snake.yml` and replace its contents with:
+
+```yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: ReddyNikhila
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+3. Click **Commit changes** — this triggers the Action automatically on save.
+4. Go to the **Actions** tab and confirm the "Generate Snake" run finishes with a green checkmark (~30 seconds).
+5. Refresh your profile page — the snake will now animate using the exact URL already in this README, no further edits needed.
+
+If it still doesn't render after that, check **Settings → Actions → General** and make sure "Workflow permissions" is set to **Read and write permissions** — the Action needs write access to push the `output` branch.
 
 </details>
 
